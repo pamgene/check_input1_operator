@@ -1,9 +1,18 @@
 library(tercen)
 library(dplyr)
+library(pgCheckInput)
 
-(ctx = tercenCtx())  %>% 
-  select(.y, .ci, .ri) %>% 
-  group_by(.ci, .ri) %>%
-  summarise(median = median(.y)) %>%
+do.check <- function(df) {
+  check(MultipleValuesPerCell, df)
+  #check(NonUniqueDataMapping, df, openUrlOnError = TRUE)
+  
+  df %>% rename(checked_input = .y) 
+}
+
+ctx = tercenCtx()
+
+ctx %>% 
+  select(.ci, .ri, .y) %>%
+  do(do.check(.)) %>%
   ctx$addNamespace() %>%
   ctx$save()

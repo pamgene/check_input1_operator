@@ -14,5 +14,6 @@ ctx = tercenCtx()
 ctx %>% 
   select(.ci, .ri, .sids, .y) %>%
   do(do.check(.)) %>%
+  select(-.sids) %>%
   ctx$addNamespace() %>%
   ctx$save()

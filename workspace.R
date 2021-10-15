@@ -19,7 +19,8 @@ do.check <- function(df) {
 ctx = tercenCtx()
 
 ctx %>% 
-  select(.ci, .ri, .sids, .y) %>%
+  select(.ci, .ri, .sids, .tlbIdx, .y) %>%
   do(do.check(.)) %>%
+  select(-c(.sids, .tlbIdx)) %>%
   ctx$addNamespace() %>%
   ctx$save()

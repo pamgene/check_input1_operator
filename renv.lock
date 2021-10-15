@@ -150,8 +150,8 @@
       "RemoteRepo": "pgcheckinput",
       "RemoteUsername": "tercen",
       "RemoteRef": "HEAD",
-      "RemoteSha": "35aaa2f6aeed9e32d98fd8c425421fdc73104968",
-      "Hash": "e7c145d70e36e2cd97685c0547ae69cd"
+      "RemoteSha": "83aa94904ce955ee9cb98a7bfd5b34c4fe1d6ea5",
+      "Hash": "78d8a54c47d454a7ff0c4229e9f9626c"
     },
     "pillar": {
       "Package": "pillar",

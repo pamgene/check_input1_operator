@@ -3,7 +3,5 @@
   "description": "Check input and return valid output",
   "tags": ["check", "pamgene"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/check_input1_operator"]
+  "urls": ["https://github.com/pamgene/check_input1_operator"]
 }
-
-
